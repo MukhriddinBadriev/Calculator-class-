@@ -7,18 +7,16 @@ private:
     double num2;
 public:
     bool set_num1(double num1) {
-        if(num1!=0)this->num1 = num1;
-        if (num1 == 0) {
-            return false;
+        if (num1 != 0){
+            this->num1 = num1; return true;
         }
-        else return true;
+        else return false;
     }
     bool set_num2(double num2) {
-        if (num2 != 0)this->num2 = num2;
-        if (num2 == 0) {  
-            return false;
+        if (num2 != 0) {
+            this->num2 = num2; return true;
         }
-        else return true;
+        else return false;
     }
     double add() {
         return num1 + num2;
@@ -53,6 +51,7 @@ int main()
         cout << "Введите num2: ";
         cin >> num2;
         s1.set_num2(num2);
+
         if (s1.set_num1(num1) == 0 || s1.set_num2(num2) == 0) {
             cout << "Неверный ввод!" << endl; continue;
         }
