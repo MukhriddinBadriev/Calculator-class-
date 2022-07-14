@@ -52,7 +52,7 @@ int main()
         cin >> num2;
         s1.set_num2(num2);
 
-        if (s1.set_num1(num1) == 0 || s1.set_num2(num2) == 0) {
+        if (num1 == 0 || num2== 0) {
             cout << "Неверный ввод!" << endl; continue;
         }
         cout << "num1 + num2 = " << s1.add() << endl;
