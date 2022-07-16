@@ -47,12 +47,12 @@ int main()
     while (true) {
         cout << "Введите num1: ";
         cin >> num1;
-        s1.set_num1(num1);
+        bool a = s1.set_num1(num1);
         cout << "Введите num2: ";
         cin >> num2;
-        s1.set_num2(num2);
+        bool b=s1.set_num2(num2);
 
-        if (num1 == 0 || num2== 0) {
+        if (a == 0 || b== 0) {
             cout << "Неверный ввод!" << endl; continue;
         }
         cout << "num1 + num2 = " << s1.add() << endl;
